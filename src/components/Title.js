@@ -1,10 +1,10 @@
 import React from "react";
 
-const Title = ({ occupationTitle, regionTitle }) => {
+const Title = ({ occupation, region }) => {
   return (
     <div>
       <h1>Occupation Overview</h1>
-      <p>{`${occupationTitle} in ${regionTitle}`}</p>
+      <p>{`${occupation.title} in ${region.title}`}</p>
     </div>
   );
 };

@@ -86,6 +86,10 @@ img {
   color: var(--danger-color);
 }
 
+.text-blue {
+  color: #0080ff;
+}
+
 .text-center {
   text-align: center;
 }
@@ -124,6 +128,10 @@ img {
 
 .border-left {
   border-left: #ccc 1px dotted;
+}
+
+.border-bottom {
+  border-bottom: #ccc 1px dotted;
 }
 
 /* List */
@@ -194,6 +202,15 @@ img {
   grid-gap: 1rem;
 }
 
+.grid-3-gap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  width: 41%;
+  text-align: right;
+}
+
+/* grid with no gap */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -203,6 +220,12 @@ img {
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 1rem;
 }
 
@@ -365,10 +388,25 @@ table th {
   z-index: 1;
   width: 100%;
   opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.navbar-no-pad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
   margin-bottom: 1rem;
 }
 
 .navbar ul {
+  display: flex;
+}
+
+.flex {
   display: flex;
 }
 
