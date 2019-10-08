@@ -1,4 +1,7 @@
+HOW TO RUN PROJECT LOCALLY
+
 To run this project you just need to clone the project from this repository. Run "npm install" in the main directory. Once that is finished, run "npm start". This should run the project on localhost:3000. 
+
 
 BELOW IS WHAT COMES WITH REACT APP BY DEFAULT
 
