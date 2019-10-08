@@ -63,7 +63,7 @@ img {
 
 .lead {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .text-center {
@@ -88,6 +88,10 @@ img {
 
 .text-blue {
   color: #0080ff;
+}
+
+.text-orange {
+  color: #ffa500;
 }
 
 .text-center {
@@ -145,7 +149,7 @@ img {
 
 /* Padding */
 .p {
-  padding: 0.5rem;
+  padding: 0.5rem 0 0.5rem 0.5rem;
 }
 .p-1 {
   padding: 1rem;
@@ -167,6 +171,42 @@ img {
 }
 .py-3 {
   padding: 3rem 0;
+}
+
+.py-1-left {
+  padding-left: 0.8rem;
+}
+
+.py-2-left {
+  padding-left: 2.5rem;
+}
+
+.py-1n-right {
+  padding-right: 0.8rem;
+}
+
+.py-1-right {
+  padding-right: 1rem;
+}
+
+.py-1half-right {
+  padding-right: 1.4rem;
+}
+
+.py-2-right {
+  padding-right: 2rem;
+}
+
+.py-right {
+  padding-right: 4rem;
+}
+
+.py-top {
+  padding-top: 0.5rem;
+}
+
+.py-bottom {
+  padding-bottom: 0.3rem;
 }
 
 /* Margin */
@@ -195,6 +235,10 @@ img {
   margin: 3rem 0;
 }
 
+.my-bottom {
+  margin-bottom: 3rem;
+}
+
 /* Grid */
 .grid-2 {
   display: grid;
@@ -208,6 +252,36 @@ img {
   grid-gap: 1rem;
   width: 41%;
   text-align: right;
+}
+
+.kev-grid {
+  display: grid;
+  grid-template-columns: 60% 10% 10% 10% 10%;
+}
+
+.kev-grid-start {
+  grid-column-start: 0;
+  grid-column-end: 1;
+}
+
+.kev-grid-0 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.kev-grid-1 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.kev-grid-2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.kev-grid-3 {
+  grid-column-start: 5;
+  grid-column-end: 6;
 }
 
 /* grid with no gap */
@@ -408,6 +482,10 @@ table th {
 
 .flex {
   display: flex;
+}
+
+.align-items {
+  align-items: flex-end;
 }
 
 .navbar a {

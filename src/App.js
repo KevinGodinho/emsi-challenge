@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Title from "./components/Title";
-import LineChart from "./components/LineChart";
+import RegionalTrends from "./components/RegionalTrends/RegionalTrends";
 import OccupationSummary from "./components/OccupationSummary/OccupationSummary";
 import EmployingIndustries from "./components/EmployingIndustries/EmployingIndustries";
 import axios from "axios";
@@ -23,32 +23,47 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
+  // get percentage difference of job numbers between years
   getPercentChange = (originalNumber, newNumber) => {
     const percent = ((newNumber - originalNumber) / originalNumber) * 100;
+    return Number(percent.toFixed(1));
+  };
+
+  // get percentages for occupation in industry and total jobs in industry
+  getIndustryPercent = (occupationNumber, jobsNumber) => {
+    const percent = (occupationNumber / jobsNumber) * 100;
     return percent.toFixed(1);
   };
 
   render() {
-    // destructure state values
+    // destructure values
     const { data } = this.state;
-    const { getPercentChange } = this;
+    const {
+      occupation,
+      region,
+      summary,
+      trend_comparison,
+      employing_industries
+    } = data;
+    const { getPercentChange, getIndustryPercent } = this;
 
     if (data.length === 0) {
       return <h1>Loading...</h1>;
     } else {
       return (
         <div className={"container"}>
-          <Title occupation={data.occupation} region={data.region} />
+          <Title occupation={occupation} region={region} />
           <OccupationSummary
-            summary={data.summary}
+            summary={summary}
             getPercentChange={getPercentChange}
           />
-          <LineChart
-            trendComparison={data.trend_comparison}
+          <RegionalTrends
+            trendComparison={trend_comparison}
             getPercentChange={getPercentChange}
           />
           <EmployingIndustries
-            employingIndustries={data.employing_industries}
+            employingIndustries={employing_industries}
+            getIndustryPercent={getIndustryPercent}
           />
         </div>
       );

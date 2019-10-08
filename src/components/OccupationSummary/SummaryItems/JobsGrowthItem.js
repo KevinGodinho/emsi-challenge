@@ -5,7 +5,7 @@ const JobsGrowthItem = ({
 }) => {
   return (
     <div className={"card text-center"}>
-      <p className={"text-success"}>{`+ ${regional}`}</p>
+      <p className={"text-success lead"}>{`+${regional}`}</p>
       <p className={"text-dark"}>{`% Change (${start_year}-${end_year})`}</p>
       <p>
         Nation: <span className={"text-success"}>{`+${national_avg}%`}</span>

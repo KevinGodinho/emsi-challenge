@@ -4,9 +4,17 @@ import JobsGrowthItem from "./SummaryItems/JobsGrowthItem";
 import EarningsItem from "./SummaryItems/EarningsItem";
 import "../../App.css";
 
-const OccupationSummary = ({ summary, getPercentChange }) => {
-  const jobs = summary.jobs;
-  const percentChange = getPercentChange(jobs.national_avg, jobs.regional);
+const OccupationSummary = ({
+  summary: {
+    jobs: { national_avg, regional },
+    jobs,
+    jobs_growth,
+    earnings
+  },
+  getPercentChange
+}) => {
+  // const jobs = summary.jobs;
+  const percentChange = getPercentChange(national_avg, regional);
 
   return (
     <div>
@@ -15,8 +23,8 @@ const OccupationSummary = ({ summary, getPercentChange }) => {
       </h3>
       <div className={"grid-3"}>
         <JobsItem jobs={jobs} percentChange={percentChange} />
-        <JobsGrowthItem jobsGrowth={summary.jobs_growth} />
-        <EarningsItem earnings={summary.earnings} />
+        <JobsGrowthItem jobsGrowth={jobs_growth} />
+        <EarningsItem earnings={earnings} />
       </div>
     </div>
   );
